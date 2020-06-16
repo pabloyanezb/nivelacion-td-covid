@@ -42,4 +42,18 @@ function renderActivity(recipe) {
 	
 }
 
+$(function(){
+	if (window.location.pathname == "/nivelacion-td-covid/index.html") {
+		  $('.js-back').hide();
+	} else {
+		  $('.js-back').show();
+	}
+});
 
+$(function(){
+	if (window.location.pathname == "/nivelacion-td-covid/recipe.html") {
+		  $('.js-menu').hide();
+	} else {
+		  $('.js-menu').show();
+	}
+});
