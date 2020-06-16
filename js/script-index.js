@@ -41,7 +41,7 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
-
+// Etapa 1
 $(function(){
 	if (window.location.pathname == "/nivelacion-td-covid/index.html") {
 		  $('.js-back').hide();
@@ -56,4 +56,8 @@ $(function(){
 	} else {
 		  $('.js-menu').show();
 	}
+});
+//Etapa 2
+$(function printNews () {
+	$('.callout-news>p').html('NUEVAS NOTICIAS');
 });
