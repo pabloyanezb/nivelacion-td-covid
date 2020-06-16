@@ -57,7 +57,7 @@ function renderHighlightedRecipes(recipesArray) {
 		  }
 	}
 }
-// ...
+// Etapa 4
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
 * marcado el atributo "highlighted" como TRUE
@@ -66,4 +66,18 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+	$('.list-recipes').append(`
+	<a class="item-recipe" href="#">
+		<span class="attribution">
+		<span class="title-recipe">${recipe.title} </span>
+		<span class="metadata-recipe">
+			<span class="author-recipe">${recipe.source.name}</span>
+			<span class="bookmarks-recipe">
+			<span class="icon-bookmark"></span> 
+			</span>
+		</span>
+		</span>
+	
+		<img src= "./img/recipes/320x350/${recipe.name}.jpg" />
+	</a>`);
 }
