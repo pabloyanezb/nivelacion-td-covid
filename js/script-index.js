@@ -6,23 +6,6 @@ $(document).ready( function(){
 });
 
 
-/*
-* Función que se encarga de pintar TODAS las recetas que tengan 
-* marcado el atributo "highlighted" como TRUE
-*/
-function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
-}
-
-/*
-* Función que se encarga de pintar UNA recetas que tenga 
-* marcado el atributo "highlighted" como TRUE
-* Aqui se tiene que crear el HTML que esta en el 
-* archivo "templates/templates-recipe.html"
-*/
-function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
-}
 
 
 
@@ -44,20 +27,43 @@ function renderActivity(recipe) {
 // Etapa 1
 $(function(){
 	if (window.location.pathname == "/nivelacion-td-covid/index.html") {
-		  $('.js-back').hide();
+		$('.js-back').hide();
 	} else {
-		  $('.js-back').show();
+		$('.js-back').show();
 	}
 });
 
 $(function(){
 	if (window.location.pathname == "/nivelacion-td-covid/recipe.html") {
-		  $('.js-menu').hide();
+		$('.js-menu').hide();
 	} else {
-		  $('.js-menu').show();
+		$('.js-menu').show();
 	}
 });
-//Etapa 2
+// Etapa 2
 $(function printNews () {
 	$('.callout-news>p').html('NUEVAS NOTICIAS');
 });
+// Etapa 3
+/*
+* Función que se encarga de pintar TODAS las recetas que tengan 
+* marcado el atributo "highlighted" como TRUE
+*/
+function renderHighlightedRecipes(recipesArray) {
+	console.log('Recipes: ', recipesArray);
+	for(var i=0; i<recipesArray.length-1; i++) {
+		  if(recipesArray[i].highlighted === true){
+			renderRecipe(recipesArray[i]);
+		  }
+	}
+}
+// ...
+/*
+* Función que se encarga de pintar UNA recetas que tenga 
+* marcado el atributo "highlighted" como TRUE
+* Aqui se tiene que crear el HTML que esta en el 
+* archivo "templates/templates-recipe.html"
+*/
+function renderRecipe(recipe) {
+	console.log('Voy a pintar la receta: ', recipe);
+}
