@@ -1,5 +1,8 @@
 $(document).ready( function(){
 
+	// Etapa 1
+	$('.js-back').hide();
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	renderActivities(activities);
@@ -9,22 +12,6 @@ $(document).ready( function(){
 
 
 
-// Etapa 1
-$(function(){
-	if (window.location.pathname == "/nivelacion-td-covid/index.html") {
-		$('.js-back').hide();
-	} else {
-		$('.js-back').show();
-	}
-});
-
-$(function(){
-	if (window.location.pathname == "/nivelacion-td-covid/recipe.html") {
-		$('.js-menu').hide();
-	} else {
-		$('.js-menu').show();
-	}
-});
 // Etapa 2
 $(function printNews () {
 	$('.callout-news>p').html('NUEVAS RECETAS');
