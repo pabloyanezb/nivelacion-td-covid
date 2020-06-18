@@ -19,3 +19,8 @@ $('.js-show-make').on('click', function() {
 	$(this).addClass('active');
 	$('.js-show-recipe').removeClass('active');
 });
+
+// Etapa 10
+$('.js-back').on('click', function() {
+	window.location = './index.html'
+});
